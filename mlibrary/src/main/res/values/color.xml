@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorDotTrue">#ffffff</color>
+    <color name="colorDotFalse">#bfbbbb</color>
+    <color name="llColorDoc">#00ffffff</color>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RollViewPager">
+        <attr name="color_doc_true" format="color"></attr>
+        <attr name="color_doc_false" format="color"></attr>
+        <attr name="color_size" format="dimension"></attr>
+        <attr name="isStart" format="boolean"></attr>
+        <attr name="isDoc" format="boolean"></attr>
+        <attr name="ll_color_Doc" format="color"></attr>
+        <attr name="doc_leftMargin" format="dimension"></attr>
+        <attr name="doc_rightMargin" format="dimension"></attr>
+        <attr name="doc_bottomMargin" format="dimension"></attr>
+        <attr name="doc_leftPadding" format="dimension"></attr>
+        <attr name="doc_rightPadding" format="dimension"></attr>
+        <attr name="time" format="integer"></attr>
+        <attr name="gravity_doc">
+            <enum name="center" value="1"></enum>
+            <enum name="left" value="0"></enum>
+            <enum name="right" value="2"></enum>
+        </attr>
+    </declare-styleable>
+</resources>
