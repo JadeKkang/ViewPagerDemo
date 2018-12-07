@@ -93,7 +93,7 @@
 	
 	6.setItemClick(click: ItemClick) RollViewPager设置点击回调监听
 	
-# 预留方法
+# 注意
        
        1.已经使用过 glide 防止依赖重合 implementation 'com.github.bumptech.glide:glide:3.7.0'
        
