@@ -87,10 +87,12 @@ class RollView : ViewPager {
     val handler2 = object : Handler() {
         override fun handleMessage(msg: android.os.Message) {
             if (isStart) {
-                var item = (currentItem + 1) % imgList!!.size
-                setCurrentItem(item)
-                this.removeMessages(1)
-                this.sendEmptyMessageDelayed(1, time.toLong())
+                if(imgList!=null) {
+                    var item = (currentItem + 1) % imgList!!.size
+                    setCurrentItem(item)
+                    this.removeMessages(1)
+                    this.sendEmptyMessageDelayed(1, time.toLong())
+                }
             }
         }
     }
@@ -164,10 +166,12 @@ class RollView : ViewPager {
                         isAutoPlay = true
                     }
                     0 -> {
-                        if (currentItem == adapter!!.count - 1 && !isAutoPlay) {
-                            setCurrentItem(0, false)
-                        } else if (currentItem == 0 && !isAutoPlay) {
-                            setCurrentItem(adapter!!.count - 1, false)
+                        if(adapter!=null) {
+                            if (currentItem == adapter!!.count - 1 && !isAutoPlay) {
+                                setCurrentItem(0, false)
+                            } else if (currentItem == 0 && !isAutoPlay) {
+                                setCurrentItem(adapter!!.count - 1, false)
+                            }
                         }
                     }
                 }
@@ -208,14 +212,19 @@ class RollView : ViewPager {
         }
 
         override fun getCount(): Int {
-            return imgList!!.size
+            if(imgList!=null) {
+                return imgList!!.size
+            }
+            return 0
         }
 
         override fun instantiateItem(container: ViewGroup, position: Int): Any {
 
             var imageView = ImageView(context);
             imageView.scaleType=ImageView.ScaleType.FIT_XY
-            Glide.with(context).load(imgList!![position]).diskCacheStrategy(DiskCacheStrategy.ALL).into(imageView)
+            if(imgList!=null) {
+                Glide.with(context).load(imgList!![position]).diskCacheStrategy(DiskCacheStrategy.ALL).into(imageView)
+            }
             imageView.setOnClickListener {
                 if (click != null) {
                     click!!.itemClick(position)

@@ -57,13 +57,18 @@ class GuideViewPager : ViewPager {
         }
 
         override fun getCount(): Int {
-            return imgList!!.size
+            if(imgList!=null) {
+                return imgList!!.size
+            }
+            return 0
         }
 
         override fun instantiateItem(container: ViewGroup, position: Int): Any {
             var imageView = ImageView(context)
             imageView.scaleType = ImageView.ScaleType.FIT_XY
-            imageView.setImageResource(imgList!![position])
+            if(imgList!=null) {
+                imageView.setImageResource(imgList!![position])
+            }
             imageView.setOnClickListener {
                 if (click!=null){
                     click!!.itemClick(position)

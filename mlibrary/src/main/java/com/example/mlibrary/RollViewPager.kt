@@ -118,6 +118,9 @@ class RollViewPager : RelativeLayout {
         roll_pager!!.setIsPlay(false)
     }
 
+    /**
+     * 设置Viewpager  PageTransformer属性
+     */
     fun setPageTransformer(reverseDrawingOrder: Boolean, transformer: ViewPager.PageTransformer?) {
         roll_pager!!.setPageTransformer(reverseDrawingOrder,transformer)
     }
