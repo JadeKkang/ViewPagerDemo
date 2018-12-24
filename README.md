@@ -19,7 +19,7 @@
        
     2.添加依赖
     
-    {implementation 'com.github.JadeKkang:ViewPagerDemo:v1.0.1'}
+    {implementation 'com.github.JadeKkang:ViewPagerDemo:v1.0.2'}
     3.xml中使用
     <--引导页-->
     <com.example.mlibrary.GuideViewPager
