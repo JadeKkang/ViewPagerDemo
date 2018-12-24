@@ -11,7 +11,7 @@ public class DepthPageTransformer implements ViewPager.PageTransformer {
 
         if (position < -1) { // [-Infinity,-1)
             // This page is way off-screen to the left.
-            view.setAlpha(0);
+            view.setAlpha(1);
 
         } else if (position <= 0) { // [-1,0]
             // Use the default slide transition when moving to the left page
@@ -22,7 +22,7 @@ public class DepthPageTransformer implements ViewPager.PageTransformer {
 
         } else if (position <= 1) { // (0,1]
             // Fade the page out.
-            view.setAlpha(1 - position);
+            view.setAlpha(1-position);
 
             // Counteract the default slide transition
             view.setTranslationX(pageWidth * -position);

@@ -17,6 +17,9 @@ public class DepthPageTransformer2 implements ViewPager.PageTransformer {
         float slope = (1.0f - 0.9f) / 1;
         //一个公式
         float scaleValue = 0.9f + tempScale * slope;
+        if (position==0.0||position==-1.0){
+            scaleValue=1.0f;
+        }
         page.setScaleX(1.0f);
         page.setScaleY(scaleValue);
 
