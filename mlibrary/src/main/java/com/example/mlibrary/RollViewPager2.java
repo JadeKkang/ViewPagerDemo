@@ -132,7 +132,7 @@ public class RollViewPager2 extends RelativeLayout {
     /**
      * 停止播放
      */
-    private void stopPlay() {
+    public void stopPlay() {
         roll_pager.stopPlay();
     }
 
