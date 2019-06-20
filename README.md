@@ -117,3 +117,5 @@
        1.已经使用过 glide 防止依赖重合 implementation 'com.github.bumptech.glide:glide:3.7.0'
        
        2.注意添加权限  <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+       
+       3.使用时 在对应的生命周期调取stop方法停止自动播放
