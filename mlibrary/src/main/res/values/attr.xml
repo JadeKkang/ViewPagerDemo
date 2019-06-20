@@ -13,6 +13,8 @@
         <attr name="doc_leftPadding" format="dimension"></attr>
         <attr name="doc_rightPadding" format="dimension"></attr>
         <attr name="time" format="integer"></attr>
+        <attr name="time2" format="integer"></attr>
+        <attr name="pagemargins" format="integer"></attr>
         <attr name="gravity_doc">
             <enum name="center" value="1"></enum>
             <enum name="left" value="0"></enum>

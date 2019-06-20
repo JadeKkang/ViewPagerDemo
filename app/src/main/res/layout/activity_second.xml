@@ -14,17 +14,6 @@
         >
     </com.example.mlibrary.RollViewPager>
     <com.example.mlibrary.RollViewPager
-        android:id="@+id/roll2"
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-        app:color_doc_true="@color/colorDotTrue"
-        app:color_doc_false="@color/colorDotFalse"
-        app:gravity_doc="left"
-        app:doc_leftMargin="10dp"
-        app:isStart="false"
-        >
-    </com.example.mlibrary.RollViewPager>
-    <com.example.mlibrary.RollViewPager
         android:id="@+id/roll3"
         android:layout_width="match_parent"
         android:layout_height="220dp"
@@ -36,4 +25,17 @@
         app:isStart="false"
         >
     </com.example.mlibrary.RollViewPager>
+    <com.example.mlibrary.RollViewPager2
+        android:id="@+id/roll4"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:color_doc_true="@color/colorDotTrue"
+        app:color_doc_false="@color/colorDotFalse"
+        app:gravity_doc="right"
+        app:doc_rightMargin="10dp"
+        app:ll_color_Doc="#edb4b9"
+        app:isStart="true"
+        app:isDoc="false"
+        >
+    </com.example.mlibrary.RollViewPager2>
 </LinearLayout>
