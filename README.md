@@ -19,7 +19,7 @@
        
     2.添加依赖
     
-    {implementation 'com.github.JadeKkang:ViewPagerDemo:v1.0.2'}
+    {implementation 'com.github.JadeKkang:ViewPagerDemo:v1.0.3'}
     3.xml中使用
     <--引导页-->
     <com.example.mlibrary.GuideViewPager
@@ -63,6 +63,20 @@
         app:isStart="false"
         >
     </com.example.mlibrary.RollViewPager>
+    <com.example.mlibrary.RollViewPager2
+        android:id="@+id/roll4"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:color_doc_true="@color/colorDotTrue"
+        app:color_doc_false="@color/colorDotFalse"
+        app:gravity_doc="right"
+        app:doc_rightMargin="10dp"
+        app:ll_color_Doc="#edb4b9"
+        app:isStart="true"
+        app:isDoc="false"
+        >
+    </com.example.mlibrary.RollViewPager2>
+    
 # 自定义属性
 | 属性 | 值 | 描述 | 
 | ------------- |:-------------:| -----:| 
@@ -78,6 +92,8 @@
 | doc_leftPadding | 5dp | 小圆点距离左边间隙 | 
 | doc_rightPadding | 5dp| 小圆点距离右边间隙 | 
 | time | 3000 | 自动播放间隔时间 | 
+| time2 | 3000 | 图片切换时间 | 
+| pagemargins | 10 | 图片之间距离 | 
 | gravity_doc |center、left、right | 小圆点显示位置 左、中、右 | 
 # 预留方法
 
@@ -92,6 +108,9 @@
 	5.setPageTransformer(reverseDrawingOrder: Boolean, transformer: ViewPager.PageTransformer?) 设置Viewpager  PageTransformer属性
 	
 	6.setItemClick(click: ItemClick) RollViewPager设置点击回调监听
+	
+	7.setImg(imgList: List<Int>) RollViewPager2设置资源图片
+
 	
 # 注意
        
